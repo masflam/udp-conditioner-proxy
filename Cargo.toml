@@ -2,10 +2,13 @@
 name = "udp-conditioner-proxy"
 version = "0.3.0"
 edition = "2021"
-authors = ["Kuba Jaroszewski <jakub.jaroszewski@gmail.com>"]
-description = "Simple UDP proxy to simulate network conditions"
-repository = "https://github.com/pierd/udp-conditioner-proxy"
-homepage = "https://github.com/pierd/udp-conditioner-proxy"
+authors = [
+	"Kuba Jaroszewski <jakub.jaroszewski@gmail.com>",
+	"Łukasz Drukała <masflam@masflam.com>",
+]
+description = "Simple UDP proxy to simulate network conditions, with a GUI"
+repository = "https://github.com/masflam/udp-conditioner-proxy"
+homepage = "https://github.com/masflam/udp-conditioner-proxy"
 keywords = ["networking", "udp"]
 categories = ["network-programming"]
 readme = "README.md"
@@ -13,6 +16,8 @@ license = "MIT OR Apache-2.0"
 
 [dependencies]
 clap = { version = "4.6.2", features = ["derive"] }
+eframe = "0.35.0"
+egui = "0.35.0"
 flume = { version = "0.12.0", features = ["async"] }
 rand = "0.10.2"
-tokio = { version = "1.53.0", features = ["macros", "net", "process", "rt-multi-thread", "signal", "time"]}
+tokio = { version = "1.53.0", features = ["macros", "net", "process", "rt-multi-thread", "signal", "sync", "time"]}
